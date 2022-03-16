@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Assignment 2: Practicing Databinding</h1>
+      <hr/>
+      
+      <label>Username:</label>
+      <input 
+      type="text" 
+      class="form-control"
+      [(ngModel)]="username">
+      <p>
+        {{!username ? 'Enter the username...' : 'hmm... username '+username+' looks good!' }}
+      </p>
+      
+      <button 
+      class="btn btn-primary"
+      [disabled]="username === ''" 
+      (click)="username = ''">
+        Reset
+      </button>
+      
+    </div>
+  </div>
+</div>
