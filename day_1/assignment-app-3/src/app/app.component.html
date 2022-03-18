@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button 
+      class="btn btn-primary"
+      (click)="togglePara()"
+      >Display Details</button>
+      <p *ngIf="showPara">This is some secret text!</p>
+      <div 
+      *ngFor="let i of log"
+      [ngStyle]="{backgroundColor: log.indexOf(i)>=5 ? 'blue' : 'transparent'}"
+      [ngClass]="{'text-white': log.indexOf(i)>=5}"
+      > 
+      {{ i }} </div>
+    </div>
+  </div>
+</div>
